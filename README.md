@@ -65,6 +65,32 @@ Save (Ctrl + O, Enter, Ctrl + X) and restart Tomcat:
 sudo /apache-tomcat-9.0.106/bin/shutdown.sh
 sudo /apache-tomcat-9.0.106/bin/startup.sh
 ```
+### Step 10 : allow access from any IP address, not just localhost
+```
+nano /home/ec2-user/apache-tomcat-9.0.106/webapps/manager/META-INF/context.xml
+```
+Find:
+```
+<Valve className="org.apache.catalina.valves.RemoteAddrValve"
+       allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+```
+Replace with:
+```
+<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow=".*" />
+```
+
+### Step 11 : To change Tomcat's default port (8080) to any other port (e.g., 9090), you need to edit the server.xml file.
+```
+nano /home/ec2-user/apache-tomcat-9.0.106/conf/server.xml
+```
+Find this block (near line 69)
+```
+<Connector port="8080" protocol="HTTP/1.1"
+           connectionTimeout="20000"
+           redirectPort="8443" />
+```
+change port number 8080 to 9090
+#### Note: Once the changes is done shutdown and startup the server
 ## Tomcat is installed and running on Amazon Linux
 
 
