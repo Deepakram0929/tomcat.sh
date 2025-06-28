@@ -50,7 +50,7 @@ http://<Your-EC2-Public-IP>:8080
 ```
 ### Step 9: Configure Tomcat Users
 ```
-sudo nano /apache-tomcat-9.0.106/conf/tomcat-users.xml
+sudo nano apache-tomcat-9.0.106/conf/tomcat-users.xml
 ```
 Add this inside <tomcat-users>:
 ```
@@ -62,8 +62,8 @@ Add this inside <tomcat-users>:
 ```
 Save (Ctrl + O, Enter, Ctrl + X) and restart Tomcat:
 ```
-sudo /apache-tomcat-9.0.106/bin/shutdown.sh
-sudo /apache-tomcat-9.0.106/bin/startup.sh
+sudo apache-tomcat-9.0.106/bin/shutdown.sh
+sudo apache-tomcat-9.0.106/bin/startup.sh
 ```
 ### Step 10 : allow access from any IP address, not just localhost
 ```
