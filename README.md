@@ -18,7 +18,7 @@ sudo dnf install java-11-amazon-corretto -y
 ```
 ### Step 3: Download Tomcat
 ```
-https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108.tar.gz
 ```
 ### Step 4: Extract Tomcat
 ```
