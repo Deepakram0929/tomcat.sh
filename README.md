@@ -22,11 +22,11 @@ wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108
 ```
 ### Step 4: Extract Tomcat
 ```
-sudo tar -xvf apache-tomcat-9.0.106.tar.gz
+sudo tar -xvf apache-tomcat-9.0.108.tar.gz
 ```
 ### Step 5: Enter inside extracted file
 ```
-cd apache-tomcat-9.0.106
+cd apache-tomcat-9.0.108
 ```
 ### Step 6: Enter inside bin directory and start tomcat server and stop 
 ```
@@ -50,7 +50,7 @@ http://<Your-EC2-Public-IP>:8080
 ```
 ### Step 9: Configure Tomcat Users
 ```
-sudo nano apache-tomcat-9.0.106/conf/tomcat-users.xml
+sudo nano apache-tomcat-9.0.108/conf/tomcat-users.xml
 ```
 Add this inside <tomcat-users>:
 ```
@@ -62,12 +62,12 @@ Add this inside <tomcat-users>:
 ```
 Save (Ctrl + O, Enter, Ctrl + X) and restart Tomcat:
 ```
-sudo apache-tomcat-9.0.106/bin/shutdown.sh
-sudo apache-tomcat-9.0.106/bin/startup.sh
+sudo apache-tomcat-9.0.108/bin/shutdown.sh
+sudo apache-tomcat-9.0.108/bin/startup.sh
 ```
 ### Step 10 : allow access from any IP address, not just localhost
 ```
-nano /home/ec2-user/apache-tomcat-9.0.106/webapps/manager/META-INF/context.xml
+nano /home/ec2-user/apache-tomcat-9.0.108/webapps/manager/META-INF/context.xml
 ```
 Find:
 ```
@@ -81,7 +81,7 @@ Replace with:
 
 ### Step 11 : To change Tomcat's default port (8080) to any other port (e.g., 9090), you need to edit the server.xml file.
 ```
-nano /home/ec2-user/apache-tomcat-9.0.106/conf/server.xml
+nano /home/ec2-user/apache-tomcat-9.0.108/conf/server.xml
 ```
 Find this block (near line 69)
 ```
